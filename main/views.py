@@ -100,11 +100,13 @@ def GetUrlViaAddress(address):
 		
 	if address == "0xf9a2d40589271be17612a3f57a9028a568f56e3d":
 		url = "doken"
+	elif address == "0xce186ad6430e2fe494a22c9edbd4c68794a28b35":
+		url = "loop"
 	
 	
 
 	else:
-		url = "doken"
+		url = "loop"
 
 
 	return url
@@ -113,12 +115,14 @@ def GetUrlViaName(name):
 
 	if name == "Doken Super Chain (DSC)":
 		url = "doken"
+	elif name == "LoopNetwork (LOOP)":
+		url = "loop"
 	
 	
     
 	    
 	else:
-		url = "doken"
+		url = "loop"
 
 	return url
 
@@ -126,10 +130,10 @@ def GetUrlViaName(name):
 def IndexView(request):
 	if request.method == "POST":
 		address_db = [
-		"0xf9a2d40589271be17612a3f57a9028a568f56e3d",
+		"0xf9a2d40589271be17612a3f57a9028a568f56e3d", "0xce186ad6430e2fe494a22c9edbd4c68794a28b35",
 		]
 
-		name_db = ["Doken Super Chain (DSC)"]
+		name_db = ["Doken Super Chain (DSC)", "LoopNetwork (LOOP)"]
 
 		status = False
 		result = None
